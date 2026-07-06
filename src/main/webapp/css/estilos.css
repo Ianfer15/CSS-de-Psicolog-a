@@ -329,7 +329,7 @@ main {
 
 .app-content {
     margin-left: var(--sidebar-ancho);
-    padding: 336px 402px;
+    padding: 36px 42px;
     min-height: calc(100vh - var(--header-altura));
 }
 
@@ -1802,4 +1802,328 @@ textarea::placeholder {
     .confirmacion-acciones {
         flex-direction: column;
     }
+}
+
+
+
+        :root{
+            --header-altura: 82px;
+            --sidebar-ancho: 220px;
+        }
+
+        body{
+            overflow-x: hidden;
+        }
+
+        .app-header{
+            height: var(--header-altura);
+            padding: 0 26px;
+        }
+
+        .logo-circle{
+            width: 56px;
+            height: 56px;
+            overflow: hidden;
+        }
+
+        .logo-circle img{
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .brand-title{
+            font-size: 21px;
+        }
+
+        .brand-subtitle{
+            font-size: 12px;
+        }
+
+        .app-sidebar{
+            width: var(--sidebar-ancho);
+            top: var(--header-altura);
+            min-height: calc(100vh - var(--header-altura));
+            padding: 24px 14px;
+        }
+
+        .sidebar-link{
+            min-height: 42px;
+            padding: 0 18px;
+            font-size: 14px;
+        }
+
+        .sidebar-icon svg,
+        .header-icon svg{
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .app-content{
+            margin-left: var(--sidebar-ancho);
+            padding: 32px 34px;
+            overflow-x: hidden;
+        }
+
+        .titulo-pagina{
+            font-size: 28px;
+        }
+
+        .subtitulo-pagina{
+            margin-bottom: 20px;
+        }
+
+        .agenda-top{
+            display: grid;
+            grid-template-columns: 220px 220px 220px 1fr 92px;
+            gap: 18px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .filtro-select{
+            width: 100%;
+            height: 40px;
+            border: 1px solid var(--color-borde);
+            border-radius: var(--radio-sm);
+            background: var(--color-blanco);
+            color: var(--color-titulo);
+            font-weight: 800;
+            padding: 0 12px;
+            outline: none;
+            font-size: 13px;
+        }
+
+        .btn-filter{
+            height: 40px;
+            min-height: 40px;
+            justify-self: end;
+        }
+
+        .leyenda-estados{
+            width: 100%;
+            min-height: 42px;
+            margin: 0 0 12px;
+            padding: 0 16px;
+            border-radius: var(--radio-sm);
+            box-shadow: var(--sombra-card);
+            background: var(--color-blanco);
+            border: 1px solid var(--color-borde);
+            justify-content: center;
+            gap: 36px;
+        }
+
+        .leyenda-item{
+            font-size: 12px;
+        }
+
+        .agenda-layout{
+            grid-template-columns: minmax(0, 1fr) 260px;
+            gap: 10px;
+        }
+
+        .calendario-grid{
+            grid-template-columns: 64px repeat(5, minmax(116px, 1fr));
+        }
+
+        .calendario-header{
+            min-height: 48px;
+            padding: 8px;
+            font-size: 12px;
+            line-height: 1.15;
+        }
+
+        .calendario-hora{
+            min-height: 56px;
+            padding: 8px 6px;
+            font-size: 12px;
+            line-height: 1.15;
+        }
+
+        .calendario-dia{
+            min-height: 56px;
+            padding: 8px;
+        }
+
+        .calendario-dia.sin-cita{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #A0AEC0;
+            font-size: 11px;
+        }
+
+        .cita-card{
+            margin: 0;
+            padding: 7px 8px;
+            font-size: 11px;
+            min-height: 34px;
+            cursor: pointer;
+            transition: 0.15s ease;
+        }
+
+        .cita-card:hover{
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+        }
+
+        .cita-hora{
+            font-size: 10px;
+        }
+
+        .agenda-detalle{
+            padding: 18px;
+            min-height: 260px;
+        }
+
+        .agenda-detalle .titulo-card{
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        .agenda-detalle .detalle-item{
+            grid-template-columns: 78px 1fr;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .agenda-detalle .btn{
+            min-height: 32px;
+            font-size: 12px;
+            padding: 7px 10px;
+        }
+
+        .agenda-solicitudes{
+            margin-top: 20px;
+        }
+
+        .agenda-solicitudes .card-header{
+            padding: 16px 18px 0;
+            margin-bottom: 6px;
+        }
+
+        .agenda-solicitudes .titulo-card{
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        .tabla th{
+            font-size: 12px;
+            padding: 11px 18px;
+        }
+
+        .tabla td{
+            font-size: 12px;
+            padding: 10px 18px;
+        }
+
+        .paciente-tabla{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+        }
+
+        .mini-avatar{
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-primario-suave);
+            color: var(--color-primario);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .mini-avatar.warning{
+            background: var(--color-alerta-fondo);
+            color: var(--color-alerta);
+        }
+
+        .mini-avatar.purple{
+            background: #F3E8FF;
+            color: var(--color-utp-morado);
+        }
+
+        .ocultar-filtro{
+            display: none !important;
+        }
+
+        @media (max-width: 1180px){
+            .agenda-top{
+                grid-template-columns: repeat(2, minmax(180px, 1fr));
+            }
+
+            .btn-filter{
+                justify-self: start;
+            }
+
+            .agenda-layout{
+                grid-template-columns: 1fr;
+            }
+        }
+
+  /* =========================
+   FIX REAL: FULL PANTALLA
+   ========================= */
+
+/* evita scroll horizontal raro */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* contenido usa toda la pantalla disponible */
+.app-content{
+    margin-left: var(--sidebar-ancho);
+    padding: 24px 20px;   /* 🔥 reducido para que no “corte” */
+    width: calc(100vw - var(--sidebar-ancho));
+    max-width: none;
+    box-sizing: border-box;
+}
+
+/* layout general */
+.agenda-layout{
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr; /* detalle abajo */
+}
+
+/* calendario ocupa TODO el ancho real */
+.calendario-card{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* grid interno no se comprime */
+.calendario-grid{
+    width: 100%;
+    min-width: 0;
+}
+
+/* filtros alineados al ancho real */
+.agenda-top{
+    width: 100%;
+}
+
+/* leyenda igual */
+.leyenda-estados{
+    width: 100%;
+}
+
+/* detalle abajo ocupa toda la pantalla */
+.agenda-detalle{
+    width: 100%;
+    margin-top: 16px;
+    box-sizing: border-box;
 }
