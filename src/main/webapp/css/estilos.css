@@ -2127,3 +2127,850 @@ html, body {
     margin-top: 16px;
     box-sizing: border-box;
 }
+
+/* ==========================================================
+   PERSONA 3 - MIS CITAS
+==========================================================*/
+
+.mis-citas-page{
+    padding:18px;
+}
+
+.mis-citas-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:18px;
+}
+
+.mis-citas-page .titulo-pagina{
+    font-size:38px;
+    font-weight:700;
+    color:var(--color-titulo);
+    margin-bottom:5px;
+}
+
+.mis-citas-page .subtitulo-pagina{
+    font-size:15px;
+    color:var(--color-secundario);
+}
+
+.mis-citas-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-bottom:18px;
+}
+
+.mis-citas-page .card{
+    padding:22px;
+}
+
+.mis-citas-page .titulo-card{
+    font-size:22px;
+    margin-bottom:14px;
+}
+
+.titulo-con-icono{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icono-card{
+    width:30px;
+    height:30px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.icono-card svg{
+    width:17px;
+    height:17px;
+    stroke:currentColor;
+    stroke-width:2;
+    fill:none;
+}
+
+.icono-card.verde{
+    background:#EAFBF0;
+    color:#16A34A;
+}
+
+.icono-card.azul{
+    background:#EEF4FF;
+    color:#2563EB;
+}
+
+.btn-nueva-cita{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.btn-nueva-cita svg{
+    width:15px;
+    height:15px;
+    stroke:white;
+    fill:none;
+    stroke-width:2;
+}
+
+/*-------------CITA-------------*/
+
+.detalle-item{
+    display:grid;
+    grid-template-columns:90px auto;
+    margin-bottom:14px;
+    font-size:15px;
+}
+
+.detalle-label{
+    color:#64748B;
+    font-weight:600;
+}
+
+.detalle-valor{
+    font-weight:700;
+}
+
+.alerta-info{
+    margin-top:20px;
+    padding:13px 15px;
+    border-radius:10px;
+    background:#EAF2FF;
+    color:#2563EB;
+    font-size:14px;
+}
+
+/*-------------CALENDARIO-------------*/
+
+.calendario-mis-citas-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.calendario-mis-citas-header .titulo-card{
+    margin:0;
+    font-size:28px;
+}
+
+.calendario-mis-citas-header .btn{
+    width:42px;
+    height:42px;
+    min-height:42px;
+    padding:0;
+    border-radius:10px;
+    border:2px solid #2563EB;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.calendario-tabla{
+    width:100%;
+}
+
+.calendario-tabla th{
+    font-size:13px;
+    padding:11px;
+    font-weight:700;
+}
+
+.calendario-tabla td{
+    font-size:15px;
+    padding:11px;
+    text-align:center;
+}
+
+.dia-cita{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.dia-aprobada{
+    background:#EAFBF0;
+    color:#16A34A;
+}
+
+.dia-pendiente{
+    background:#FFF7E6;
+    color:#DD7706;
+}
+
+.dia-cancelada{
+    background:#FDECEC;
+    color:#EF233C;
+}
+
+.leyenda-calendario{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:16px;
+    font-size:13px;
+}
+
+.punto{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:6px;
+}
+
+.punto-pendiente{
+    background:#DD7706;
+}
+
+.punto-aprobada{
+    background:#16A34A;
+}
+
+.punto-atendida{
+    background:#2563EB;
+}
+
+.punto-cancelada{
+    background:#EF233C;
+}
+
+/*-------------TABLAS-------------*/
+
+.tabla-citas-card{
+    margin-top:15px;
+}
+
+.tabla-citas-card .card-header{
+    padding:15px 20px 10px;
+}
+
+.mis-citas-page .tabla th{
+    font-size:13px;
+    padding:13px;
+}
+
+.mis-citas-page .tabla td{
+    font-size:13px;
+    padding:13px;
+}
+
+.tabla-acciones{
+    display:flex;
+    gap:8px;
+}
+
+.mis-citas-page .btn-sm{
+    font-size:12px;
+    min-height:32px;
+    padding:7px 12px;
+}
+
+.mis-citas-page .badge{
+    font-size:12px;
+    padding:6px 12px;
+}
+
+.estado-rechazada{
+    background:#F1F5F9;
+    color:#64748B;
+}
+
+/*-------------SIDEBAR-------------*/
+
+.sidebar-icon svg{
+    width:17px;
+    height:17px;
+    stroke:currentColor;
+    stroke-width:2;
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+/* ==========================================================
+   PERSONA 3 - ACTIVIDADES DISPONIBLES
+==========================================================*/
+
+.actividades-page {
+    padding: 24px 34px;
+}
+
+.actividades-page .titulo-pagina {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.actividades-page .subtitulo-pagina {
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.actividades-header {
+    margin-bottom: 16px;
+}
+
+.actividades-header .titulo-card {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.actividades-header .subtitulo-card {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 980px;
+}
+
+.actividad-card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
+}
+
+.actividad-banner {
+    height: 112px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.banner-verde {
+    background: #DDF7E9;
+    color: #16A34A;
+}
+
+.banner-morado {
+    background: #EEE3FF;
+    color: #7C3AED;
+}
+
+.banner-celeste {
+    background: #DDF7F4;
+    color: #0F766E;
+}
+
+.actividad-icono svg {
+    width: 40px;
+    height: 40px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.badge-evento {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.actividad-body {
+    padding: 18px;
+}
+
+.actividad-titulo {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-titulo);
+    margin: 0 0 10px;
+}
+
+.actividad-texto {
+    font-size: 13px;
+    color: var(--color-secundario);
+    line-height: 1.45;
+    min-height: 58px;
+    margin: 0 0 14px;
+}
+
+.actividad-info {
+    font-size: 12px;
+    color: var(--color-texto);
+    margin: 0 0 8px;
+}
+
+.actividad-card .btn {
+    margin-top: 12px;
+    min-height: 34px;
+    font-size: 12px;
+}
+
+.actividad-info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.mini-icono-info {
+    width: 13px;
+    height: 13px;
+    color: var(--color-secundario);
+    display: inline-flex;
+}
+
+.mini-icono-info svg {
+    width: 13px;
+    height: 13px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.actividad-icono svg{
+    width:72px;
+    height:72px;
+    stroke:#22A652;
+    fill:none;
+    stroke-width:2.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.actividad-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#60656F;
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.info-icon{
+    width:18px;
+    height:18px;
+    stroke:#6B7280;
+    fill:none;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    flex-shrink:0;
+}
+
+.actividad-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#60656F;
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.info-icon{
+    width:18px;
+    height:18px;
+    stroke:#6B7280;
+    fill:none;
+    stroke-width:2.4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    flex-shrink:0;
+}
+
+.actividad-icono{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:70px;
+    height:70px;
+}
+
+.actividad-icono svg{
+    width:62px;
+    height:62px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:3.2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.icono-verde{
+    color:#19A957;
+}
+
+.icono-morado{
+    color:#7C3AED;
+}
+
+.icono-teal{
+    color:#00897B;
+}
+
+.actividad-icono{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.actividad-icono svg{
+    width:58px;
+    height:58px;
+}
+
+.badge-actividad{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    padding:7px 18px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+  /* ==========================================================
+   PERSONA 3 - DETALLE ACTIVIDAD
+==========================================================*/
+
+.detalle-actividad-page {
+    padding: 34px 42px;
+}
+
+.detalle-actividad-page .titulo-pagina {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.detalle-actividad-page .subtitulo-pagina {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.detalle-actividad-card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    padding: 34px;
+    min-height: 360px;
+}
+
+.detalle-actividad-card .badge {
+    margin-bottom: 28px;
+}
+
+.detalle-actividad-titulo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--color-titulo);
+    margin: 0 0 12px;
+}
+
+.detalle-actividad-descripcion {
+    max-width: 780px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-secundario);
+    margin: 0 0 32px;
+}
+
+.detalle-actividad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px 28px;
+}
+
+.detalle-campo label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--color-titulo);
+    margin-bottom: 8px;
+}
+
+.detalle-valor-box {
+    min-height: 40px;
+    border: 1px solid var(--color-linea);
+    border-radius: 6px;
+    background: var(--color-blanco);
+    color: var(--color-texto);
+    padding: 11px 12px;
+    font-size: 13px;
+}
+
+.detalle-actividad-acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
+
+.detalle-actividad-acciones .btn {
+    min-width: 130px;
+}
+
+/* ==========================================================
+   PERSONA 3 - PERFIL
+==========================================================*/
+
+.perfil-page{
+
+padding:28px 34px;
+
+}
+
+.perfil-card{
+
+margin-top:18px;
+
+padding:22px;
+
+}
+
+.perfil-card-header{
+
+margin-bottom:18px;
+
+}
+
+.perfil-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+}
+
+.perfil-doble{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+
+}
+
+.campo{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.campo label{
+
+font-size:12px;
+
+font-weight:700;
+
+margin-bottom:6px;
+
+color:var(--color-titulo);
+
+}
+
+.campo input{
+
+height:40px;
+
+border:1px solid var(--color-linea);
+
+border-radius:8px;
+
+padding:10px;
+
+background:#fff;
+
+font-size:13px;
+
+}
+
+.perfil-seguridad{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+gap:30px;
+
+}
+
+.perfil-botones{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+width:220px;
+
+}
+
+.perfil-botones .btn{
+
+width:100%;
+
+}
+
+.perfil-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 1px solid var(--color-linea);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.perfil-card-header .icono-card {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.perfil-acciones-final {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.perfil-acciones-final .btn {
+    min-width: 180px;
+}
+
+ /* ==========================================================
+   PERSONA 3 - DASHBOARD PSICÓLOGO
+==========================================================*/
+
+.dashboard-psicologo-page {
+    padding: 34px 42px;
+}
+
+.dashboard-psicologo-page .titulo-pagina {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.dashboard-psicologo-page .subtitulo-pagina {
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.dashboard-psicologo-metricas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 980px;
+    margin-bottom: 54px;
+}
+
+.dashboard-card {
+    border-radius: 12px;
+    padding: 24px;
+    min-height: 120px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--color-borde);
+}
+
+.dashboard-card-azul {
+    background: #EAF2FF;
+    color: #2563EB;
+}
+
+.dashboard-card-verde {
+    background: #EAFBF0;
+    color: #16A34A;
+}
+
+.dashboard-card-rojo {
+    background: #FEEDEE;
+    color: #EF233C;
+}
+
+.dashboard-label {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.dashboard-numero {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.dashboard-numero svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dashboard-tabla-card {
+    max-width: 980px;
+}
+
+.dashboard-tabla-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.dashboard-tabla-header .titulo-card {
+    margin: 0;
+    font-size: 20px;
+}
+
+.dashboard-tabla-header a {
+    font-size: 13px;
+    color: var(--color-secundario);
+    font-weight: 700;
+}
+
+.dashboard-tabla {
+    background: transparent;
+}
+
+.dashboard-tabla th {
+    background: transparent;
+    font-size: 13px;
+    padding: 14px 20px;
+}
+
+.dashboard-tabla td {
+    font-size: 13px;
+    padding: 14px 20px;
+}
+
+.sidebar-icon svg {
+    width: 17px;
+    height: 17px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
