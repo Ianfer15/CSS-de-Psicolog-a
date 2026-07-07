@@ -20,11 +20,6 @@
     </div>
 
     <div class="header-right">
-        <div class="header-icon">
-            🔔
-            <span class="notification-badge">3</span>
-        </div>
-
         <div class="user-profile">
             <div class="user-avatar">PS</div>
             <div>
