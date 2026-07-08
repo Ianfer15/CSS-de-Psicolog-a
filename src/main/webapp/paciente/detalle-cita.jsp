@@ -20,11 +20,7 @@
     </div>
 
     <div class="header-right">
-        <div class="header-icon">
-            🔔
-            <span class="notification-badge">1</span>
-        </div>
-
+        
         <div class="user-profile">
             <div class="user-avatar">PA</div>
             <div>

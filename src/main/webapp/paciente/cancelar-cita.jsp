@@ -20,10 +20,7 @@
     </div>
 
     <div class="header-right">
-        <div class="header-icon">
-            🔔
-            <span class="notification-badge">1</span>
-        </div>
+        
 
         <div class="user-profile">
             <div class="user-avatar">PA</div>
@@ -133,43 +130,31 @@
 
         </div>
 
-        <form class="formulario mt-3" action="#" method="post">
+<form class="formulario mt-3"
+      action="${pageContext.request.contextPath}/CitaServlet"
+      method="post">
 
-            <div class="form-group">
+    <input type="hidden" name="accion" value="cancelar">
+    <input type="hidden" name="id_cita" value="${cita.idCita}">
 
-                <label for="motivoCancelacion">
-                    Motivo de cancelación
-                </label>
+    <div class="form-group">
 
-                <textarea
-                    id="motivoCancelacion"
-                    name="motivoCancelacion"
-                    maxlength="300"
-                    placeholder="Escribe brevemente por qué deseas cancelar la cita..."
-                    required></textarea>
+        <label for="motivoCancelacion">
+            Motivo de cancelación
+        </label>
 
-                <div class="texto-derecha texto-pequeno">
-                    0/300
-                </div>
+        <textarea
+            id="motivoCancelacion"
+            name="motivo_cancelacion"
+            maxlength="300"
+            placeholder="Escribe brevemente por qué deseas cancelar la cita..."
+            required></textarea>
 
-            </div>
-
-        </form>
-
-        <div class="alerta-info mt-3">
-
-            Solo se permite cancelar citas con estado
-            <strong>Pendiente</strong> o
-            <strong>Aprobada</strong>.
-            Si la cita ya fue
-            <strong>Atendida</strong>,
-            <strong>Rechazada</strong> o
-            <strong>Cancelada</strong>,
-            solo se puede consultar.
-
+        <div class="texto-derecha texto-pequeno">
+            0/300
         </div>
 
-    </section>
+    </div>
 
     <div class="acciones-derecha mt-3">
 
@@ -183,6 +168,20 @@
 
     </div>
 
+</form>
+
+<div class="alerta-info mt-3">
+
+    Solo se permite cancelar citas con estado
+    <strong>Pendiente</strong> o
+    <strong>Aprobada</strong>.
+    Si la cita ya fue
+    <strong>Atendida</strong>,
+    <strong>Rechazada</strong> o
+    <strong>Cancelada</strong>,
+    solo se puede consultar.
+
+</div>
 
 </main>
 

@@ -21,11 +21,7 @@
     </div>
 
     <div class="header-right">
-        <div class="header-icon">
-            🔔
-            <span class="notification-badge">1</span>
-        </div>
-
+        
         <div class="user-profile">
             <div class="user-avatar">PA</div>
             <div>
@@ -104,128 +100,114 @@
             </div>
         </div>
 
-        <!--
-        Cuando exista el Servlet cambiar por:
 
-        action="${pageContext.request.contextPath}/SolicitarCitaServlet"
+        <form action="${pageContext.request.contextPath}/CitaServlet" method="post" class="formulario">
 
-        -->
+    <div class="grid-2">
 
-        <form action="#" method="post">
+        <div class="form-group">
 
-            <div class="grid-2">
+            <label>Psicólogo</label>
 
-                <div class="form-group">
+            <select name="id_psicologo" class="input" required>
 
-                    <label>Psicólogo</label>
+                <option value="">Seleccione un psicólogo</option>
 
-                    <select name="idPsicologo" required>
+            </select>
 
-                        <option value="">
-                            Seleccione un psicólogo
-                        </option>
+        </div>
 
-                        <!--
+        <div class="form-group">
 
-                        Cuando exista el DAO y el Servlet, reemplazar por:
+            <label>Fecha de la cita</label>
 
-                        List<Psicologo> psicologos =
-                        (List<Psicologo>) request.getAttribute("psicologos");
+            <input
+                type="date"
+                name="fecha_cita"
+                class="input"
+                required>
 
-                        for(Psicologo p : psicologos){
+        </div>
 
-                            <option value="id">
-                                Nombre del psicólogo
-                            </option>
+        <div class="form-group">
 
-                        }
+            <label>Hora de inicio</label>
 
-                        -->
+            <input
+                type="time"
+                name="hora_inicio"
+                class="input"
+                required>
 
-                    </select>
+        </div>
 
-                </div>
+        <div class="form-group">
 
-                <div class="form-group">
+            <label>Hora de finalización</label>
 
-                    <label>Fecha de la cita</label>
+            <input
+                type="time"
+                name="hora_fin"
+                class="input"
+                required>
 
-                    <input
-                        type="date"
-                        name="fechaCita"
-                        required>
+        </div>
 
-                </div>
+    </div>
 
-                <div class="form-group">
+    <div class="form-group mt-3">
 
-                    <label>Hora de inicio</label>
+        <label>Motivo de la cita</label>
 
-                    <input
-                        type="time"
-                        name="horaInicio"
-                        required>
+        <textarea
+            name="motivo_cita"
+            class="textarea"
+            rows="5"
+            maxlength="500"
+            placeholder="Describa brevemente el motivo de la consulta."
+            required></textarea>
 
-                </div>
+    </div>
 
-                <div class="form-group">
+    <div class="card mt-3">
 
-                    <label>Hora de finalización</label>
+        <p>
+            <strong>Importante:</strong>
+            La fecha de solicitud se registrará automáticamente con la fecha actual.
+        </p>
 
-                    <input
-                        type="time"
-                        name="horaFin"
-                        required>
+        <p>
+            El estado inicial de la cita será
+            <strong>Pendiente</strong>.
+        </p>
 
-                </div>
+        <p>
+            El paciente autenticado será asociado automáticamente a la cita mediante su sesión.
+        </p>
 
-            </div>
+    </div>
 
-            <div class="form-group mt-3">
+    <div class="card-header mt-3">
 
-                <label>Motivo de la cita</label>
+        <a
+            href="${pageContext.request.contextPath}/paciente/dashboard-paciente.jsp"
+            class="btn btn-secondary">
 
-                <textarea
-                    name="motivo"
-                    rows="5"
-                    maxlength="500"
-                    placeholder="Describa brevemente el motivo de la consulta."
-                    required></textarea>
+            Cancelar
 
-            </div>
+        </a>
 
-            <div class="card mt-3">
+        <button
+            type="submit"
+            class="btn btn-primary">
 
-                <p>
-                    <strong>Importante:</strong>
-                    La solicitud quedará registrada con estado
-                    <strong>Pendiente</strong>
-                    hasta que el psicólogo la revise.
-                </p>
+            Enviar solicitud
 
-            </div>
+        </button>
 
-            <div class="card-header mt-3">
+    </div>
 
-                <a
-                    href="${pageContext.request.contextPath}/paciente/dashboard-paciente.jsp"
-                    class="btn btn-secondary">
-
-                    Cancelar
-
-                </a>
-
-                <button
-                    type="submit"
-                    class="btn btn-primary">
-
-                    Enviar solicitud
-
-                </button>
-
-            </div>
-
-        </form>
+</form>
 
     </section>
 

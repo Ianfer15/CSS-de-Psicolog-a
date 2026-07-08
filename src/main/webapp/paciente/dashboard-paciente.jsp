@@ -19,12 +19,7 @@
         </div>
     </div>
 
-    <div class="header-right">
-        <div class="header-icon">
-            🔔
-            <span class="notification-badge">1</span>
-        </div>
-
+<div class="header-right">
         <div class="user-profile">
             <div class="user-avatar">PA</div>
             <div>
@@ -295,9 +290,7 @@
 
         <a href="${pageContext.request.contextPath}/paciente/mis-citas.jsp"
            class="btn btn-outline">
-
             Ver todas
-
         </a>
 
     </div>
@@ -322,15 +315,54 @@
         <tbody>
 
             <%--
+            Aquí posteriormente se recorrerán las citas del paciente.
 
-            Aquí se recorrerán las citas del paciente.
+            while(rs.next()){
 
-            id_cita
-            fecha_solicitud
-            fecha_cita
-            hora_inicio
-            estado_cita
+                String estado = rs.getString("estado_cita");
+                String claseEstado = "";
 
+                if ("Pendiente".equalsIgnoreCase(estado)) {
+                    claseEstado = "estado-pendiente";
+                } else if ("Aprobada".equalsIgnoreCase(estado)) {
+                    claseEstado = "estado-aprobada";
+                } else if ("Atendida".equalsIgnoreCase(estado)) {
+                    claseEstado = "estado-atendida";
+                } else if ("Cancelada".equalsIgnoreCase(estado)) {
+                    claseEstado = "estado-cancelada";
+                } else if ("Rechazada".equalsIgnoreCase(estado)) {
+                    claseEstado = "estado-rechazada";
+                }
+
+            %>
+
+            <tr>
+
+                <td><%= rs.getInt("id_cita") %></td>
+                <td><%= rs.getDate("fecha_solicitud") %></td>
+                <td><%= rs.getDate("fecha_cita") %></td>
+                <td><%= rs.getTime("hora_inicio") %></td>
+
+                <td>
+                    <span class="badge <%= claseEstado %>">
+                        <%= estado %>
+                    </span>
+                </td>
+
+                <td>
+
+                    <a href="${pageContext.request.contextPath}/paciente/detalle-cita.jsp?id=<%= rs.getInt("id_cita") %>"
+                       class="btn btn-outline btn-sm">
+
+                        Ver detalle
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+            <% } %>
             --%>
 
         </tbody>
@@ -338,7 +370,6 @@
     </table>
 
 </section>
-
 
 <!-- Actividades -->
 
